@@ -50,7 +50,7 @@ namespace Binary_Search
                 }
                 while (middleIndex < searchArr.Length);
                 if(!found)Console.WriteLine(string.Format("Element {0} not found", s));
-                Console.WriteLine("Continue? Y/N");
+                Console.Write("Continue? Y/N");
                 choice = Console.ReadLine()[0];
             } while (choice == 'Y' || choice == 'y');
             return;
