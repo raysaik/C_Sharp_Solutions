@@ -13,6 +13,7 @@ namespace Binary_Search
             //A sorted Array
             int[] searchArr = { 11, 12, 43, 57, 87, 93, 101, 129, 134, 156, 178, 190 };
             Console.WriteLine(string.Join(",", searchArr));
+            int upperBoundary = searchArr.Length;int lowerBoundary = 0;
             bool found = false;
             Char choice = 'Y';
             do
@@ -33,13 +34,15 @@ namespace Binary_Search
 
                     if (searchArr[middleIndex - 1] > s)
                     {
+                        upperBoundary = middleIndex;
                         if (middleIndex > 1)
                             middleIndex = middleIndex % 2 == 0 ? (middleIndex / 2) : (middleIndex + 1) / 2;
                         else break;
                     }
                     else if (searchArr[middleIndex - 1] < s)
                     {
-                        middleIndex = middleIndex + (middleIndex % 2 == 0 ? (middleIndex / 2) : (middleIndex + 1) / 2);
+                        lowerBoundary = middleIndex;
+                        middleIndex = (upperBoundary + lowerBoundary) % 2 == 0 ? ((upperBoundary + lowerBoundary) / 2) : ((upperBoundary + lowerBoundary + 1) / 2);
                     }
                     else
                     {
