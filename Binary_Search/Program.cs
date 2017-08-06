@@ -13,11 +13,14 @@ namespace Binary_Search
             //A sorted Array
             int[] searchArr = { 11, 12, 43, 57, 87, 93, 101, 129, 134, 156, 178, 190 };
             Console.WriteLine(string.Join(",", searchArr));
-            int upperBoundary = searchArr.Length;int lowerBoundary = 0;
+            int upperBoundary; int lowerBoundary;
             bool found = false;
             Char choice = 'Y';
+
             do
             {
+                found = false;
+                upperBoundary = searchArr.Length; lowerBoundary = 0;
                 Console.Write("Please enter the element to be searched:");
                 //Element to be searched 
                 string searchElement = Console.ReadLine();
@@ -25,24 +28,24 @@ namespace Binary_Search
                 if (!int.TryParse(searchElement, out s))
                 {
                     Console.WriteLine("Invalid input");
-                    return;
+                    continue;
                 }
                 int usefulArrLength = searchArr.Length;
-                int middleIndex = usefulArrLength % 2 == 0 ? (usefulArrLength / 2) : (usefulArrLength + 1) / 2;
+                int middleIndex = 0;
                 do
                 {
-
-                    if (searchArr[middleIndex - 1] > s)
+                    middleIndex = (upperBoundary + lowerBoundary) % 2 == 0 ? ((upperBoundary + lowerBoundary) / 2) : ((upperBoundary + lowerBoundary + 1) / 2);
+                    if (s < searchArr[middleIndex - 1])
                     {
+                        if (middleIndex == 1 || middleIndex == upperBoundary) //means the first element has been searched OR the upperboundary has already been serached
+                            break; 
                         upperBoundary = middleIndex;
-                        if (middleIndex > 1)
-                            middleIndex = middleIndex % 2 == 0 ? (middleIndex / 2) : (middleIndex + 1) / 2;
-                        else break;
                     }
-                    else if (searchArr[middleIndex - 1] < s)
+                    else if (s > searchArr[middleIndex - 1])
                     {
+                        if (middleIndex == searchArr.Length || middleIndex == upperBoundary) //means the last elment has been searched
+                            break;
                         lowerBoundary = middleIndex;
-                        middleIndex = (upperBoundary + lowerBoundary) % 2 == 0 ? ((upperBoundary + lowerBoundary) / 2) : ((upperBoundary + lowerBoundary + 1) / 2);
                     }
                     else
                     {
@@ -51,12 +54,14 @@ namespace Binary_Search
                         break;
                     }
                 }
-                while (middleIndex < searchArr.Length);
+                while (upperBoundary != (lowerBoundary));
                 if(!found)Console.WriteLine(string.Format("Element {0} not found", s));
-                Console.Write("Continue? Y/N");
+                Console.Write("Continue? Y/N : ");
                 choice = Console.ReadLine()[0];
             } while (choice == 'Y' || choice == 'y');
             return;
         }
+
+        
     }
 }
