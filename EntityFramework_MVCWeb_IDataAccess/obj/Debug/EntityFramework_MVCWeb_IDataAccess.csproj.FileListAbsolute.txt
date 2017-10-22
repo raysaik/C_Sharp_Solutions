@@ -1,0 +1,6 @@
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_IDataAccess\bin\Debug\EntityFramework_MVCWeb_IDataAccess.dll
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_IDataAccess\bin\Debug\EntityFramework_MVCWeb_IDataAccess.pdb
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_IDataAccess\bin\Debug\EntityFramework.dll
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_IDataAccess\obj\Debug\EntityFramework_MVCWeb_IDataAccess.csprojResolveAssemblyReference.cache
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_IDataAccess\obj\Debug\EntityFramework_MVCWeb_IDataAccess.dll
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_IDataAccess\obj\Debug\EntityFramework_MVCWeb_IDataAccess.pdb

@@ -1,0 +1,45 @@
+﻿@model EntityFramework_MVCWeb.Models.Doctors
+
+<div class="row">
+    <div class="col-md-3">
+        @(Html.LabelFor(model => model.DoctorsBAL.FirstOrDefault().DoctorId))
+    </div>
+    <div class="col-md-3">
+        @(Html.LabelFor(model => model.DoctorsBAL.FirstOrDefault().DoctorName))
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(model => model.DoctorsBAL.FirstOrDefault().DoctorCategory)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(model => model.DoctorsBAL.FirstOrDefault().DoctorPhoneNo)
+    </div>
+</div>
+<div class="row">
+    @if (Model.DoctorsBAL != null && Model.DoctorsBAL.Count() > 0)
+    {
+        foreach (EntityFramework_MVCWeb_BusinessAccessLayer.Domain_Models.Doctor_BAL doctor in Model.DoctorsBAL)
+        {
+        <div class="col-md-3">
+            @doctor.DoctorId
+        </div> 
+        <div class="col-md-3">
+            @doctor.DoctorName
+        </div> 
+        <div class="col-md-3">
+            @doctor.DoctorCategory
+        </div> 
+        <div class="col-md-3">
+            @doctor.DoctorPhoneNo
+        </div>          
+        }
+    }
+    else
+    {
+        <div class="col-md-9">
+            Sorry!, No doctor is available
+        </div>
+    }
+</div>
+<div class="row">
+    @Html.Partial("~/Views/PartialViews/_pager.cshtml",Model.DoctorsBAL.FirstOrDefault())
+</div>

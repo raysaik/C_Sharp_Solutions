@@ -1,0 +1,40 @@
+﻿@model Web_Api_Trial.Models.ProductViewModel
+<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">Web API</a>
+            </p>
+        </div>
+    </div>
+</header>
+<div id="body">
+    <section class="featured">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th><u>Product Name</u></th>
+                    <th><u>Product Number</u></th>
+                    <th>Price</th>
+                    <th>Modified date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in @Model.products)
+                {
+                    <tr>
+                        <th scope="row">@item.Name</th>
+                        <td>@item.ProductNumber</td>
+                        <td>@item.ListPrice</td>
+                        <td>@item.ModifiedDate</td>
+                        <td><a data-value="@item.ProductID" href="javascript:void(0)" class="btnEdit">Edit</a></td>
+                    </tr> 
+                }
+            </tbody>
+        </table>
+    </section>
+    <section>
+
+    </section>
+</div>

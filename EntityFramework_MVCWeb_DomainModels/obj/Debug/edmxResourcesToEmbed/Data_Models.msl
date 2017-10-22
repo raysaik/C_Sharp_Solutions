@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CASQLENBModelStoreContainer" CdmEntityContainer="CASQLENBEntities">
+    <EntitySetMapping Name="Doctor_Fees_Master">
+      <EntityTypeMapping TypeName="CASQLENBModel.Doctor_Fees_Master">
+        <MappingFragment StoreEntitySet="Doctor_Fees_Master">
+          <ScalarProperty Name="FeesId" ColumnName="FeesId" />
+          <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+          <ScalarProperty Name="Fees_for_Out_Patients" ColumnName="Fees_for_Out_Patients" />
+          <ScalarProperty Name="Fees_for_In_Patients" ColumnName="Fees_for_In_Patients" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoctorFeesDetails">
+      <EntityTypeMapping TypeName="CASQLENBModel.DoctorFeesDetail">
+        <MappingFragment StoreEntitySet="DoctorFeesDetails">
+          <ScalarProperty Name="FeesId" ColumnName="FeesId" />
+          <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+          <ScalarProperty Name="Fees_for_Out_Patients" ColumnName="Fees_for_Out_Patients" />
+          <ScalarProperty Name="Fees_for_In_Patients" ColumnName="Fees_for_In_Patients" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoctorMasters">
+      <EntityTypeMapping TypeName="CASQLENBModel.DoctorMaster">
+        <MappingFragment StoreEntitySet="DoctorMaster">
+          <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+          <ScalarProperty Name="DoctorName" ColumnName="DoctorName" />
+          <ScalarProperty Name="DoctorAddress1" ColumnName="DoctorAddress1" />
+          <ScalarProperty Name="DoctorAddress2" ColumnName="DoctorAddress2" />
+          <ScalarProperty Name="Specialist" ColumnName="Specialist" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fees_Details_for_In_Patients">
+      <EntityTypeMapping TypeName="CASQLENBModel.Fees_Details_for_In_Patients">
+        <MappingFragment StoreEntitySet="Fees_Details_for_In_Patients">
+          <ScalarProperty Name="FeesId" ColumnName="FeesId" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+          <ScalarProperty Name="NoofDays" ColumnName="NoofDays" />
+          <ScalarProperty Name="Room_Rent_Per_day" ColumnName="Room_Rent_Per_day" />
+          <ScalarProperty Name="DoctorsFees" ColumnName="DoctorsFees" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fees_Details_for_Out_Patients">
+      <EntityTypeMapping TypeName="CASQLENBModel.Fees_Details_for_Out_Patients">
+        <MappingFragment StoreEntitySet="Fees_Details_for_Out_Patients">
+          <ScalarProperty Name="FeesId" ColumnName="FeesId" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+          <ScalarProperty Name="DoctorFees" ColumnName="DoctorFees" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatientDetails">
+      <EntityTypeMapping TypeName="CASQLENBModel.PatientDetail">
+        <MappingFragment StoreEntitySet="PatientDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="PatientType_In_or_Out_" ColumnName="PatientType(In or Out)" />
+          <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+          <ScalarProperty Name="DateOfVisit" ColumnName="DateOfVisit" />
+          <ScalarProperty Name="DateOfDischarge" ColumnName="DateOfDischarge" />
+          <ScalarProperty Name="Symptoms" ColumnName="Symptoms" />
+          <ScalarProperty Name="Disease" ColumnName="Disease" />
+          <ScalarProperty Name="Treatment" ColumnName="Treatment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatientMasters">
+      <EntityTypeMapping TypeName="CASQLENBModel.PatientMaster">
+        <MappingFragment StoreEntitySet="PatientMaster">
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="Patient_Name" ColumnName="Patient_Name" />
+          <ScalarProperty Name="Patient_Address1" ColumnName="Patient_Address1" />
+          <ScalarProperty Name="Patient_Address" ColumnName="Patient_Address" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Blood_Group" ColumnName="Blood_Group" />
+          <ScalarProperty Name="DateOfRegistration" ColumnName="DateOfRegistration" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Room_Rate_Master">
+      <EntityTypeMapping TypeName="CASQLENBModel.Room_Rate_Master">
+        <MappingFragment StoreEntitySet="Room_Rate_Master">
+          <ScalarProperty Name="RoomRateId" ColumnName="RoomRateId" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+          <ScalarProperty Name="Rent_Per_Day" ColumnName="Rent_Per_Day" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomMasters">
+      <EntityTypeMapping TypeName="CASQLENBModel.RoomMaster">
+        <MappingFragment StoreEntitySet="RoomMaster">
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+          <ScalarProperty Name="RoomType" ColumnName="RoomType" />
+          <ScalarProperty Name="Number_Of_Beds" ColumnName="Number_Of_Beds" />
+          <ScalarProperty Name="RoomDescription" ColumnName="RoomDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

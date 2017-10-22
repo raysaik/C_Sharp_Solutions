@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/MasterPages/_LayoutOne.cshtml";    
+}
+@model EntityFramework_MVCWeb.Models.HomeScreenViewModel
+
+
+<div class="searchBox doctors">
+    @using (Html.BeginForm("SearchDoctorsByField", "Home", FormMethod.Post, new { id = "myform", }))
+    {
+        //ISSUE make this a partial view
+        <div class="row">
+            <div class="col-md-3">
+                <label for="txtSearchdoctors">Find a doctor</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @*passing a textbox value to controller without using Model*@
+                <input type="text" placeholder="Search by Id,Name or Category" id="txtSearchdoctors" name="SearchTerm" />
+                @*@Html.TextBox("SearchTerm", null, new { placeholder="Search by Id,Name or Categories",id="txtSearchdoctors" })*@
+                <input type="submit" value="Search" />
+            </div>
+        </div>
+    }
+</div>
+
+<div id="doctors">
+    @Html.Partial("~/Views/PartialViews/_doctorsView.cshtml", Model.doctors)
+</div>

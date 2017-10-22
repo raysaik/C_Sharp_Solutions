@@ -1,0 +1,9 @@
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_DomainModels\bin\Debug\App.Config
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_DomainModels\bin\Debug\EntityFramework_MVCWeb_DomainModels.dll.config
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_DomainModels\bin\Debug\EntityFramework_MVCWeb_DomainModels.dll
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_DomainModels\bin\Debug\EntityFramework_MVCWeb_DomainModels.pdb
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_DomainModels\bin\Debug\EntityFramework.dll
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_DomainModels\bin\Debug\EntityFramework.xml
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_DomainModels\obj\Debug\EntityFramework_MVCWeb_DomainModels.dll
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_DomainModels\obj\Debug\EntityFramework_MVCWeb_DomainModels.pdb
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_DomainModels\obj\Debug\EntityFramework_MVCWeb_DataAccessLayer.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+C:\Users\saika\Documents\Visual Studio 2012\Projects\C_Sharp_Solutions\Bubble_Sort\bin\Debug\Bubble_Sort.exe.config
+C:\Users\saika\Documents\Visual Studio 2012\Projects\C_Sharp_Solutions\Bubble_Sort\bin\Debug\Bubble_Sort.exe
+C:\Users\saika\Documents\Visual Studio 2012\Projects\C_Sharp_Solutions\Bubble_Sort\bin\Debug\Bubble_Sort.pdb
+C:\Users\saika\Documents\Visual Studio 2012\Projects\C_Sharp_Solutions\Bubble_Sort\obj\Debug\Bubble_Sort.exe
+C:\Users\saika\Documents\Visual Studio 2012\Projects\C_Sharp_Solutions\Bubble_Sort\obj\Debug\Bubble_Sort.pdb

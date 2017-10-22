@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CASQLENBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CASQLENBEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Doctor_Fees_Master" EntityType="CASQLENBModel.Doctor_Fees_Master" />
+    <EntitySet Name="DoctorFeesDetails" EntityType="CASQLENBModel.DoctorFeesDetail" />
+    <EntitySet Name="DoctorMasters" EntityType="CASQLENBModel.DoctorMaster" />
+    <EntitySet Name="Fees_Details_for_In_Patients" EntityType="CASQLENBModel.Fees_Details_for_In_Patients" />
+    <EntitySet Name="Fees_Details_for_Out_Patients" EntityType="CASQLENBModel.Fees_Details_for_Out_Patients" />
+    <EntitySet Name="PatientDetails" EntityType="CASQLENBModel.PatientDetail" />
+    <EntitySet Name="PatientMasters" EntityType="CASQLENBModel.PatientMaster" />
+    <EntitySet Name="Room_Rate_Master" EntityType="CASQLENBModel.Room_Rate_Master" />
+    <EntitySet Name="RoomMasters" EntityType="CASQLENBModel.RoomMaster" />
+    <AssociationSet Name="FK_Fees_Details_for_In_Patients_Doctor_Master" Association="CASQLENBModel.FK_Fees_Details_for_In_Patients_Doctor_Master">
+      <End Role="DoctorMaster" EntitySet="DoctorMasters" />
+      <End Role="Fees_Details_for_In_Patients" EntitySet="Fees_Details_for_In_Patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Patient_Details_Doctor_Master" Association="CASQLENBModel.FK_Patient_Details_Doctor_Master">
+      <End Role="DoctorMaster" EntitySet="DoctorMasters" />
+      <End Role="PatientDetails" EntitySet="PatientDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_Doctor_Master" Association="CASQLENBModel.FK_Table_1_Doctor_Master">
+      <End Role="DoctorMaster" EntitySet="DoctorMasters" />
+      <End Role="Fees_Details_for_Out_Patients" EntitySet="Fees_Details_for_Out_Patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fees_Details_for_In_Patients_Patient_Master" Association="CASQLENBModel.FK_Fees_Details_for_In_Patients_Patient_Master">
+      <End Role="PatientMaster" EntitySet="PatientMasters" />
+      <End Role="Fees_Details_for_In_Patients" EntitySet="Fees_Details_for_In_Patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fees_Details_for_In_Patients_Room_Master" Association="CASQLENBModel.FK_Fees_Details_for_In_Patients_Room_Master">
+      <End Role="RoomMaster" EntitySet="RoomMasters" />
+      <End Role="Fees_Details_for_In_Patients" EntitySet="Fees_Details_for_In_Patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_Patient_Master" Association="CASQLENBModel.FK_Table_1_Patient_Master">
+      <End Role="PatientMaster" EntitySet="PatientMasters" />
+      <End Role="Fees_Details_for_Out_Patients" EntitySet="Fees_Details_for_Out_Patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Patient_Details_Patient_Master" Association="CASQLENBModel.FK_Patient_Details_Patient_Master">
+      <End Role="PatientMaster" EntitySet="PatientMasters" />
+      <End Role="PatientDetails" EntitySet="PatientDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Patient_Details_Room_Master" Association="CASQLENBModel.FK_Patient_Details_Room_Master">
+      <End Role="RoomMaster" EntitySet="RoomMasters" />
+      <End Role="PatientDetails" EntitySet="PatientDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Room_Rate_Master_Room_Master" Association="CASQLENBModel.FK_Room_Rate_Master_Room_Master">
+      <End Role="RoomMaster" EntitySet="RoomMasters" />
+      <End Role="Room_Rate_Master" EntitySet="Room_Rate_Master" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Doctor_Fees_Master">
+    <Key>
+      <PropertyRef Name="FeesId" />
+    </Key>
+    <Property Name="FeesId" Type="Int32" Nullable="false" />
+    <Property Name="DoctorId" Type="Int32" Nullable="false" />
+    <Property Name="Fees_for_Out_Patients" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Fees_for_In_Patients" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="DoctorFeesDetail">
+    <Key>
+      <PropertyRef Name="FeesId" />
+      <PropertyRef Name="DoctorId" />
+      <PropertyRef Name="Fees_for_Out_Patients" />
+      <PropertyRef Name="Fees_for_In_Patients" />
+    </Key>
+    <Property Name="FeesId" Type="Int32" Nullable="false" />
+    <Property Name="DoctorId" Type="Int32" Nullable="false" />
+    <Property Name="Fees_for_Out_Patients" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Fees_for_In_Patients" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="DoctorMaster">
+    <Key>
+      <PropertyRef Name="DoctorId" />
+    </Key>
+    <Property Name="DoctorId" Type="Int32" Nullable="false" />
+    <Property Name="DoctorName" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="DoctorAddress1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DoctorAddress2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Specialist" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Fees_Details_for_In_Patients" Relationship="CASQLENBModel.FK_Fees_Details_for_In_Patients_Doctor_Master" FromRole="DoctorMaster" ToRole="Fees_Details_for_In_Patients" />
+    <NavigationProperty Name="PatientDetails" Relationship="CASQLENBModel.FK_Patient_Details_Doctor_Master" FromRole="DoctorMaster" ToRole="PatientDetails" />
+    <NavigationProperty Name="Fees_Details_for_Out_Patients" Relationship="CASQLENBModel.FK_Table_1_Doctor_Master" FromRole="DoctorMaster" ToRole="Fees_Details_for_Out_Patients" />
+  </EntityType>
+  <EntityType Name="Fees_Details_for_In_Patients">
+    <Key>
+      <PropertyRef Name="FeesId" />
+    </Key>
+    <Property Name="FeesId" Type="Int32" Nullable="false" />
+    <Property Name="RoomId" Type="Int32" Nullable="false" />
+    <Property Name="PatientId" Type="Int32" Nullable="false" />
+    <Property Name="DoctorId" Type="Int32" Nullable="false" />
+    <Property Name="NoofDays" Type="Decimal" Nullable="false" Precision="8" Scale="0" />
+    <Property Name="Room_Rent_Per_day" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="DoctorsFees" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="TotalAmount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="DoctorMaster" Relationship="CASQLENBModel.FK_Fees_Details_for_In_Patients_Doctor_Master" FromRole="Fees_Details_for_In_Patients" ToRole="DoctorMaster" />
+    <NavigationProperty Name="PatientMaster" Relationship="CASQLENBModel.FK_Fees_Details_for_In_Patients_Patient_Master" FromRole="Fees_Details_for_In_Patients" ToRole="PatientMaster" />
+    <NavigationProperty Name="RoomMaster" Relationship="CASQLENBModel.FK_Fees_Details_for_In_Patients_Room_Master" FromRole="Fees_Details_for_In_Patients" ToRole="RoomMaster" />
+  </EntityType>
+  <EntityType Name="Fees_Details_for_Out_Patients">
+    <Key>
+      <PropertyRef Name="FeesId" />
+    </Key>
+    <Property Name="FeesId" Type="Int32" Nullable="false" />
+    <Property Name="PatientId" Type="Int32" Nullable="false" />
+    <Property Name="DoctorId" Type="Int32" Nullable="false" />
+    <Property Name="DoctorFees" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="TotalAmount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="DoctorMaster" Relationship="CASQLENBModel.FK_Table_1_Doctor_Master" FromRole="Fees_Details_for_Out_Patients" ToRole="DoctorMaster" />
+    <NavigationProperty Name="PatientMaster" Relationship="CASQLENBModel.FK_Table_1_Patient_Master" FromRole="Fees_Details_for_Out_Patients" ToRole="PatientMaster" />
+  </EntityType>
+  <EntityType Name="PatientDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="PatientId" Type="Int32" Nullable="false" />
+    <Property Name="PatientType_In_or_Out_" Type="Int32" Nullable="false" />
+    <Property Name="DoctorId" Type="Int32" Nullable="false" />
+    <Property Name="RoomId" Type="Int32" Nullable="false" />
+    <Property Name="DateOfVisit" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateOfDischarge" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Symptoms" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="Disease" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="Treatment" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="DoctorMaster" Relationship="CASQLENBModel.FK_Patient_Details_Doctor_Master" FromRole="PatientDetails" ToRole="DoctorMaster" />
+    <NavigationProperty Name="PatientMaster" Relationship="CASQLENBModel.FK_Patient_Details_Patient_Master" FromRole="PatientDetails" ToRole="PatientMaster" />
+    <NavigationProperty Name="RoomMaster" Relationship="CASQLENBModel.FK_Patient_Details_Room_Master" FromRole="PatientDetails" ToRole="RoomMaster" />
+  </EntityType>
+  <EntityType Name="PatientMaster">
+    <Key>
+      <PropertyRef Name="PatientId" />
+    </Key>
+    <Property Name="PatientId" Type="Int32" Nullable="false" />
+    <Property Name="Patient_Name" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Patient_Address1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Patient_Address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Phone" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="Sex" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="Blood_Group" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfRegistration" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Fees_Details_for_In_Patients" Relationship="CASQLENBModel.FK_Fees_Details_for_In_Patients_Patient_Master" FromRole="PatientMaster" ToRole="Fees_Details_for_In_Patients" />
+    <NavigationProperty Name="Fees_Details_for_Out_Patients" Relationship="CASQLENBModel.FK_Table_1_Patient_Master" FromRole="PatientMaster" ToRole="Fees_Details_for_Out_Patients" />
+    <NavigationProperty Name="PatientDetails" Relationship="CASQLENBModel.FK_Patient_Details_Patient_Master" FromRole="PatientMaster" ToRole="PatientDetails" />
+  </EntityType>
+  <EntityType Name="Room_Rate_Master">
+    <Key>
+      <PropertyRef Name="RoomRateId" />
+    </Key>
+    <Property Name="RoomRateId" Type="Int32" Nullable="false" />
+    <Property Name="RoomId" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Rent_Per_Day" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="RoomMaster" Relationship="CASQLENBModel.FK_Room_Rate_Master_Room_Master" FromRole="Room_Rate_Master" ToRole="RoomMaster" />
+  </EntityType>
+  <EntityType Name="RoomMaster">
+    <Key>
+      <PropertyRef Name="RoomId" />
+    </Key>
+    <Property Name="RoomId" Type="Int32" Nullable="false" />
+    <Property Name="RoomType" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Number_Of_Beds" Type="Int32" Nullable="false" />
+    <Property Name="RoomDescription" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Fees_Details_for_In_Patients" Relationship="CASQLENBModel.FK_Fees_Details_for_In_Patients_Room_Master" FromRole="RoomMaster" ToRole="Fees_Details_for_In_Patients" />
+    <NavigationProperty Name="PatientDetails" Relationship="CASQLENBModel.FK_Patient_Details_Room_Master" FromRole="RoomMaster" ToRole="PatientDetails" />
+    <NavigationProperty Name="Room_Rate_Master" Relationship="CASQLENBModel.FK_Room_Rate_Master_Room_Master" FromRole="RoomMaster" ToRole="Room_Rate_Master" />
+  </EntityType>
+  <Association Name="FK_Fees_Details_for_In_Patients_Doctor_Master">
+    <End Role="DoctorMaster" Type="CASQLENBModel.DoctorMaster" Multiplicity="1" />
+    <End Role="Fees_Details_for_In_Patients" Type="CASQLENBModel.Fees_Details_for_In_Patients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoctorMaster">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="Fees_Details_for_In_Patients">
+        <PropertyRef Name="DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Patient_Details_Doctor_Master">
+    <End Role="DoctorMaster" Type="CASQLENBModel.DoctorMaster" Multiplicity="1" />
+    <End Role="PatientDetails" Type="CASQLENBModel.PatientDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoctorMaster">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="PatientDetails">
+        <PropertyRef Name="DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_Doctor_Master">
+    <End Role="DoctorMaster" Type="CASQLENBModel.DoctorMaster" Multiplicity="1" />
+    <End Role="Fees_Details_for_Out_Patients" Type="CASQLENBModel.Fees_Details_for_Out_Patients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoctorMaster">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="Fees_Details_for_Out_Patients">
+        <PropertyRef Name="DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fees_Details_for_In_Patients_Patient_Master">
+    <End Role="PatientMaster" Type="CASQLENBModel.PatientMaster" Multiplicity="1" />
+    <End Role="Fees_Details_for_In_Patients" Type="CASQLENBModel.Fees_Details_for_In_Patients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PatientMaster">
+        <PropertyRef Name="PatientId" />
+      </Principal>
+      <Dependent Role="Fees_Details_for_In_Patients">
+        <PropertyRef Name="PatientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fees_Details_for_In_Patients_Room_Master">
+    <End Role="RoomMaster" Type="CASQLENBModel.RoomMaster" Multiplicity="1" />
+    <End Role="Fees_Details_for_In_Patients" Type="CASQLENBModel.Fees_Details_for_In_Patients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoomMaster">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="Fees_Details_for_In_Patients">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_Patient_Master">
+    <End Role="PatientMaster" Type="CASQLENBModel.PatientMaster" Multiplicity="1" />
+    <End Role="Fees_Details_for_Out_Patients" Type="CASQLENBModel.Fees_Details_for_Out_Patients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PatientMaster">
+        <PropertyRef Name="PatientId" />
+      </Principal>
+      <Dependent Role="Fees_Details_for_Out_Patients">
+        <PropertyRef Name="PatientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Patient_Details_Patient_Master">
+    <End Role="PatientMaster" Type="CASQLENBModel.PatientMaster" Multiplicity="1" />
+    <End Role="PatientDetails" Type="CASQLENBModel.PatientDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PatientMaster">
+        <PropertyRef Name="PatientId" />
+      </Principal>
+      <Dependent Role="PatientDetails">
+        <PropertyRef Name="PatientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Patient_Details_Room_Master">
+    <End Role="RoomMaster" Type="CASQLENBModel.RoomMaster" Multiplicity="1" />
+    <End Role="PatientDetails" Type="CASQLENBModel.PatientDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoomMaster">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="PatientDetails">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Room_Rate_Master_Room_Master">
+    <End Role="RoomMaster" Type="CASQLENBModel.RoomMaster" Multiplicity="1" />
+    <End Role="Room_Rate_Master" Type="CASQLENBModel.Room_Rate_Master" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="RoomMaster">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="Room_Rate_Master">
+        <PropertyRef Name="RoomRateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

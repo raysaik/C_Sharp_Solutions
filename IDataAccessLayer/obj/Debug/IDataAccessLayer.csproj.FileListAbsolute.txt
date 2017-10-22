@@ -1,0 +1,5 @@
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\IDataAccessLayer\bin\Debug\IDataAccessLayer.dll
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\IDataAccessLayer\bin\Debug\IDataAccessLayer.pdb
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\IDataAccessLayer\obj\Debug\IDataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\IDataAccessLayer\obj\Debug\IDataAccessLayer.dll
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\IDataAccessLayer\obj\Debug\IDataAccessLayer.pdb

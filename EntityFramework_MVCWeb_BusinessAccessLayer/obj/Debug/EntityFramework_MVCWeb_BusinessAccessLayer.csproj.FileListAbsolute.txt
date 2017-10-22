@@ -1,0 +1,10 @@
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_BusinessAccessLayer\bin\Debug\App.Config
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_BusinessAccessLayer\bin\Debug\EntityFramework_MVCWeb_BusinessAccessLayer.dll
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_BusinessAccessLayer\bin\Debug\EntityFramework_MVCWeb_BusinessAccessLayer.pdb
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_BusinessAccessLayer\bin\Debug\EntityFramework_MVCWeb_DomainModels.dll
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_BusinessAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_BusinessAccessLayer\bin\Debug\EntityFramework_MVCWeb_DomainModels.pdb
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_BusinessAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_BusinessAccessLayer\obj\Debug\EntityFramework_MVCWeb_BusinessAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_BusinessAccessLayer\obj\Debug\EntityFramework_MVCWeb_BusinessAccessLayer.dll
+C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\EntityFramework_MVCWeb_BusinessAccessLayer\obj\Debug\EntityFramework_MVCWeb_BusinessAccessLayer.pdb

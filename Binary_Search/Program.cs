@@ -11,7 +11,7 @@ namespace Binary_Search
         static void Main(string[] args)
         {
             //A sorted Array
-            int[] searchArr = { 11, 12, 43, 57, 87, 93, 101, 129, 134, 156, 178, 190 };
+            int[] searchArr = { 11, 12, 43, 57, 87, 93, 101, 129, 134, 156, 178, 190, 213, 214, 666, 888, 999 };
             Console.WriteLine(string.Join(",", searchArr));
             int upperBoundary; int lowerBoundary;
             bool found = false;

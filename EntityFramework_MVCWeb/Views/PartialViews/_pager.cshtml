@@ -1,0 +1,18 @@
+﻿@using EntityFramework_MVCWeb_Abstract_BusinessAccessLayer;
+@model IBusinessDomainModels
+<div class="row pager">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-6">
+        @Html.ActionLink("<<<","GoToFirstPage","GenericControls",null,new {id="linkBtnFirst",title="First Page"})
+        @Html.ActionLink("<","GoToPreviousPage","GenericControls",null,new {id="linkBtnPrevious",title="Previous Page"})
+        <label>Page No:</label>
+        <input type="text" id="txtCurrentPage" value="0" title="Current page"/>
+        <label>of</label>
+         <input type="text" id="txtTotalPage" title="Total pages" readonly="true"/>
+        @Html.ActionLink(">","GoToNextPage","GenericControls",null,new {id="linkBtnNext",title="Next Page"})
+        @Html.ActionLink(">>>","GoToLastPage","GenericControls",null,new {id="linkBtnLast",title="Last Page"})
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>
