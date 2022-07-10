@@ -27,3 +27,4 @@ UpgradeLog.htm
 #wwwroot/
 
 *.publishproj
+/UpgradeLog2.htm

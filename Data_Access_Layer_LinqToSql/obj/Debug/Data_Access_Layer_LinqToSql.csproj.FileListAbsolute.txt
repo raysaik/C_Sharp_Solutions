@@ -1,6 +1,0 @@
-C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\Data_Access_Layer_LinqToSql\bin\Debug\Data_Access_Layer_LinqToSql.dll.config
-C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\Data_Access_Layer_LinqToSql\bin\Debug\Data_Access_Layer_LinqToSql.dll
-C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\Data_Access_Layer_LinqToSql\bin\Debug\Data_Access_Layer_LinqToSql.pdb
-C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\Data_Access_Layer_LinqToSql\obj\Debug\Data_Access_Layer_LinqToSql.csprojResolveAssemblyReference.cache
-C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\Data_Access_Layer_LinqToSql\obj\Debug\Data_Access_Layer_LinqToSql.dll
-C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\Data_Access_Layer_LinqToSql\obj\Debug\Data_Access_Layer_LinqToSql.pdb

@@ -1,5 +1,0 @@
-C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\Binary_Search\bin\Debug\Binary_Search.exe.config
-C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\Binary_Search\bin\Debug\Binary_Search.exe
-C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\Binary_Search\bin\Debug\Binary_Search.pdb
-C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\Binary_Search\obj\Debug\Binary_Search.exe
-C:\Users\saika\documents\visual studio 2012\Projects\C_Sharp_Solutions\Binary_Search\obj\Debug\Binary_Search.pdb
